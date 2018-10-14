@@ -5930,9 +5930,9 @@ jsx-ast-utils@^2.0.0:
   dependencies:
     sha1 "^1.1.1"
 
-"kad-rtc@git+ssh://git@bitbucket.org:shinyoshiaki/kad-rtc.git":
+"kad-rtc@git+https://github.com/shinyoshiaki/kademlia-with-webrtc.git#typescript":
   version "0.0.8"
-  resolved "git+ssh://git@bitbucket.org:shinyoshiaki/kad-rtc.git#9211ccd8da6bb71bdb527f61c45fb5cdd81420e3"
+  resolved "git+https://github.com/shinyoshiaki/kademlia-with-webrtc.git#11efe6f39066482ec6f73f3713839cda5c5e2474"
   dependencies:
     events "^3.0.0"
     inquirer "^6.2.0"

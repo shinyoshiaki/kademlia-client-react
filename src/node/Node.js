@@ -21,7 +21,7 @@ export default class Node {
     this.nodeId = sha1(Math.random().toString());
     console.log("nodeId", this.nodeId);
 
-    this.kad = new Kademlia(this.nodeId, { kLength: 2 });
+    this.kad = new Kademlia(this.nodeId, { kLength: 20 });
 
     if (this.targetUrl) {
       const socket = client.connect(this.targetUrl);

@@ -3,7 +3,6 @@ import Node from "./node/Node";
 import { createNodeList } from "./components/nodeList";
 import { createStoreForm } from "./components/storeForm";
 import { createFindvalueForm } from "./components/findvalueForm";
-import { Divider } from "@material-ui/core";
 import { createKeyValueList } from "./components/keyValueList";
 
 class App extends Component {
@@ -11,8 +10,10 @@ class App extends Component {
     super(props);
     this.state = { kbuckets: undefined };
 
+    //localhost:20000のポータルノードに接続
     this.node = new Node("localhost", "20000");
     const kad = this.node.kad;
+    //ノードが追加された際のコールバック
     kad.callback.onAddPeer = data => {
       console.log({ data });
       this.setState({ kbuckets: kad.kbuckets });
@@ -22,10 +23,15 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/* ノードID */}
         {this.node.kad.nodeId}
+        {/* Kbucketsの状態 */}
         {createNodeList(this.state.kbuckets)}
+        {/* KademliaのStore */}
         {createStoreForm(this.node.kad)}
+        {/* KademliaのFindvalue */}
         {createFindvalueForm(this.node.kad)}
+        {/* KademliaのKeyValueList */}
         {createKeyValueList(this.node.kad)}
       </div>
     );
