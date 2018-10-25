@@ -11,7 +11,7 @@
     "decimal.js": "^10.0.1",
     "events": "^2.0.0",
     "history": "^4.7.2",
-    "kad-rtc": "git+https://github.com/shinyoshiaki/kademlia-with-webrtc.git#typescript",
+    "kad-rtc": "git+ssh://git@bitbucket.org/shinyoshiaki/kad-rtc.git#bson",
     "keypair": "^1.0.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -28,7 +28,7 @@
     "simple-datachannel": "^0.0.18",
     "socket.io-client": "^2.1.0",
     "spark-md5": "^3.0.0",
-    "webrtc4me": "git+https://git@github.com/shinyoshiaki/webrtc4me.git",
+    "webrtc4me": "git+https://git@github.com/shinyoshiaki/webrtc4me.git#stream",
     "wrtc": "^0.1.4"
   },
   "scripts": {

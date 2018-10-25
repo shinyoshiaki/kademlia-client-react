@@ -10,10 +10,9 @@ export default class FindvalueForm extends Component {
     this.state = { result: undefined };
   }
 
-  handleFindValue(kad = new Kademlia()) {
-    kad.findValue(word, value => {
-      this.setState({ result: value.toString() });
-    });
+  async handleFindValue(kad = new Kademlia()) {
+    const result = await kad.findValue(word);
+    this.setState({ result: result });
   }
 
   render() {

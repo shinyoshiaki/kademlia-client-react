@@ -1937,6 +1937,11 @@ bser@^2.0.0:
   dependencies:
     node-int64 "^0.4.0"
 
+bson@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/bson/-/bson-3.0.2.tgz#2467a76507a98c63ce34072f9965f4024e753dfc"
+  integrity sha512-HrDzr7y/ZkgyEVancPVDmfbaD8j81GzSNr6h6yUd/yZfavkrlrqI8aUZMCHrhyMoCW2/I+vEJDat1xDWRwVR6A==
+
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
@@ -1969,6 +1974,11 @@ buffer-indexof@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-indexof/-/buffer-indexof-1.1.1.tgz#52fabcc6a606d1a00302802648ef68f639da268c"
   integrity sha512-4/rOEg86jivtPTeOUUT61jJO1Ya1TrR/OkqCSZDyq84WJh3LuuiphBYJN+fm5xufIk4XAFcEwte/8WzC8If/1g==
+
+buffer-to-arraybuffer@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/buffer-to-arraybuffer/-/buffer-to-arraybuffer-0.0.5.tgz#6064a40fa76eb43c723aba9ef8f6e1216d10511a"
+  integrity sha1-YGSkD6dutDxyOrqe+PbhIW0QURo=
 
 buffer-xor@^1.0.3:
   version "1.0.3"
@@ -5930,10 +5940,12 @@ jsx-ast-utils@^2.0.0:
   dependencies:
     sha1 "^1.1.1"
 
-"kad-rtc@git+https://github.com/shinyoshiaki/kademlia-with-webrtc.git#typescript":
-  version "0.0.8"
-  resolved "git+https://github.com/shinyoshiaki/kademlia-with-webrtc.git#11efe6f39066482ec6f73f3713839cda5c5e2474"
+"kad-rtc@git+ssh://git@bitbucket.org/shinyoshiaki/kad-rtc.git#bson":
+  version "0.0.26"
+  resolved "git+ssh://git@bitbucket.org/shinyoshiaki/kad-rtc.git#dc5370e2527787ef9610ae2fd479b710aab74f83"
   dependencies:
+    bson "^3.0.2"
+    buffer-to-arraybuffer "^0.0.5"
     events "^3.0.0"
     inquirer "^6.2.0"
     kad-distance "git+https://git@github.com/shinyoshiaki/kad-distance.git"
@@ -5941,7 +5953,7 @@ jsx-ast-utils@^2.0.0:
     socket.io "^2.1.1"
     socket.io-client "^2.1.1"
     source-map-support "^0.5.9"
-    webrtc4me "git+https://git@github.com/shinyoshiaki/webrtc4me.git"
+    webrtc4me "git+https://git@github.com/shinyoshiaki/webrtc4me.git#stream"
     wrtc "^0.1.6"
 
 keycode@^2.1.9:
@@ -9919,9 +9931,9 @@ webpack@3.8.1:
     webpack-sources "^1.0.1"
     yargs "^8.0.2"
 
-"webrtc4me@git+https://git@github.com/shinyoshiaki/webrtc4me.git":
-  version "0.0.6"
-  resolved "git+https://git@github.com/shinyoshiaki/webrtc4me.git#23f6b3f547013e9ba8797bc42cddb831666f134c"
+"webrtc4me@git+https://git@github.com/shinyoshiaki/webrtc4me.git#stream":
+  version "0.0.3"
+  resolved "git+https://git@github.com/shinyoshiaki/webrtc4me.git#d58115ee4f81f397b4aad55499f743402de66317"
   dependencies:
     babel-polyfill "^6.26.0"
     wrtc "^0.1.6"

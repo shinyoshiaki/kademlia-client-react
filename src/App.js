@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Node from "./node/Node";
+import Node from "kad-rtc/lib/node/node";
 import { createNodeList } from "./components/nodeList";
 import { createStoreForm } from "./components/storeForm";
 import { createFindvalueForm } from "./components/findvalueForm";
-import { createKeyValueList } from "./components/keyValueList";
+// import { createKeyValueList } from "./components/keyValueList";
 
 class App extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class App extends Component {
         {/* KademliaのFindvalue */}
         {createFindvalueForm(this.node.kad)}
         {/* KademliaのKeyValueList */}
-        {createKeyValueList(this.node.kad)}
+        {/* {createKeyValueList(this.node.kad)} */}
       </div>
     );
   }
